@@ -1,14 +1,13 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return queryInterface.addColumn('users', 'password_digest', {
-      type: Sequelize.DataTypes.STRING
-    })
+    return queryInterface.addColumn("users", "password_digest", {
+      type: Sequelize.DataTypes.STRING,
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn('users', 'password_digest')
-  }
+    return queryInterface.removeColumn("users", "password_digest");
+  },
 };
-
